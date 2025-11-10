@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-12반 웹사이트</title>
+    <style>
+        /* ⚠️ 배경색 관련 안내: 빠른 색상 변화는 눈의 피로와 어지러움을 유발할 수 있어, 
+           천천히 변하는 애니메이션으로 조정했습니다. */
+        @keyframes rainbow-transition {
+            0% { background-color: #ff0000; } /* 빨강 */
+            16.66% { background-color: #ff7f00; } /* 주황 */
+            33.33% { background-color: #ffff00; } /* 노랑 */
+            50% { background-color: #00ff00; } /* 초록 */
+            66.66% { background-color: #0000ff; } /* 파랑 */
+            83.33% { background-color: #4b0082; } /* 남색 */
+            100% { background-color: #9400d3; } /* 보라 */
+        }
+
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            margin: 0;
+            padding: 20px 20px 80px 20px; /* 푸터 공간 확보를 위해 하단 패딩 늘림 */
+            text-align: center;
+            /* 배경 애니메이션 적용: 20초 동안 천천히 반복 */
+            animation: rainbow-transition 20s infinite alternate; 
+            color: #333; 
+            min-height: 100vh;
+        }
+
+        .header-container {
+            background-color: rgba(255, 255, 255, 0.85); 
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block; 
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: 900; 
+            color: #0056b3; 
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: normal;
+            color: #555;
+            margin-top: 0;
+        }
+
+        .image-container {
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 40px; 
+            padding-bottom: 50px; 
+        }
+
+        .image-item {
+            max-width: 300px;
+            width: 100%; 
+            height: auto;
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center; 
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            margin-bottom: 10px; 
+        }
+
+        .image-caption {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #1a1a1a;
+            padding: 5px 0;
+        }
+
+        /* 푸터 (Footer) 스타일 */
+        .footer {
+            margin-top: 60px; /* 위쪽 작품들과 간격 */
+            padding: 30px 0;
+            background-color: rgba(0, 0, 0, 0.7); /* 어두운 배경으로 마무리 느낌 */
+            color: #fff; /* 흰색 텍스트 */
+            font-size: 1.5em;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        /* 모바일 환경 최적화 */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            .image-item {
+                max-width: 90%; 
+            }
+            .footer {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <h1>2-12반의 웹사이트</h1>
+        <h2>2-12반의 작품들을 소개합니다</h2>
+    </div>
+
+    <div class="image-container">
+        <div class="image-item">
+            <img src="KakaoTalk_20250806_192332315.jpg" alt="2-12반 작품 1">
+            <p class="image-caption">한반도를 그렸습니다.</p>
+        </div>
+
+        <div class="image-item">
+            <img src="KakaoTalk_20250908_001038528.jpg" alt="2-12반 작품 2">
+            <p class="image-caption">감정을 그렸습니다.</p>
+        </div>
+
+        <div class="image-item">
+            <img src="파일 후면.jpg" alt="2-12반 작품 3">
+            <p class="image-caption">미예개 작품입니다.</p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>이상 2-12반의 작품들이였습니다.</p>
+    </footer>
+
+</body>
+</html>
